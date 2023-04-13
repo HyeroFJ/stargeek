@@ -5,10 +5,10 @@
 }
 
 @keyframes rgb{
-    0%{color: rgb(255, 36, 0);}
-    50%{color: rgb(0, 203, 0);}
-    75%{color: blue;}
-    100%{color: rgb(255, 36, 0);}
+    0%{color: #00c2ff;}
+    50%{color: blue;}
+    75%{color: blueviolet}
+    100%{color: #00c2ff;}
 }
 
 body{
@@ -68,41 +68,6 @@ body{
     box-shadow: rgba(187, 182, 182, 0.8) 4px 4px 8px;
 }
 
-.btn-03 {
-    color: black;
-    font-weight: 600;
-    background-color: rgb(215, 215, 215);
-    padding: 10px 20px;
-    border-radius: 10px;
-    margin-left: 16px;
-    font-weight: 600;
-    display: flex;
-    justify-content: center;
-}
-
-.btn-03:hover{
-    transform: scale(0.9);
-    transition: 0.5s;
-    box-shadow: rgba(187, 182, 182, 0.8) 4px 4px 8px;
-}
-
-.btn-02 {
-    color: white;
-    background-color: black;
-    border: 1px solid black;
-    padding: 10px 20px;
-    border-radius: 50px;
-    margin-left: 16px;
-    font-weight: 600;
-}
-
-.btn-02:hover{
-    background-color: black;
-    transform: scale(0.9);
-    transition: 0.5s;
-    box-shadow: rgba(187, 182, 182, 0.8) 4px 4px 8px;
-}
-
 .container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -141,24 +106,18 @@ section{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    justify-content: flex-start;
     height: 600px;
-}
-
-section > div > h1{
-    display: flex;
-    justify-content: center;
-    font-size: 2rem;
 }
 
 form{
     display: flex;
-    flex-direction: column; 
+    flex-direction: row; 
 }
 
-form > img {
-    height: 6rem;
-    width: 7rem;
-    border-radius: 25%;
+form > div{
+    display: flex;
+    flex-direction: row; 
 }
 
 .novo{
@@ -189,7 +148,7 @@ footer{
 }
 
 header > img{
-    height: 80px;
+    height: 100px;
 }
 
 header > a{
@@ -209,4 +168,121 @@ a{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.cards{
+    width: 100vw;
+    margin: 30px 30px;
+    display: flex;
+    flex-direction: row;
+    /* espaçamento entre os blocos */
+    justify-content: space-evenly;
+    border-radius: 25px;
+    padding-left: 10vw;
+}
+
+.card{
+    width: 300px;
+}
+
+.cards img {
+    height: 100px;
+    width: 150px;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+}
+
+.cardinfo {
+    width: 150px;
+    height: 100px;
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -5px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.cardinfo:hover{
+    background-color: blueviolet;
+}
+
+.cardnome{
+    color: white;
+    font-size: 20px;
+    font-weight: 30px;
+    padding-bottom: 30px;
+}
+.cardnome i{
+    padding-right: 0px;
+}
+
+.cardnome p{
+    padding-top: 30px;
+    font-weight: 600;
+}
+
+.card:hover{
+    transform: scale(0.9);
+    transition: 0.5s;
+}
+
+
+.linha{
+    align-self: center;
+    width: 80vw;
+    height: 5px;
+    background-color: blue;
+    margin: 20px 0;
+}
+
+
+/* Estilos do Botão de Abertura */
+.openbtn {
+    cursor: pointer;
+}
+  
+/* Estilos do Modal */
+.checkmodal {
+    display: none;
+}
+
+.modal {
+    /* talves remover fixed position */
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    /* talvez mudar background color */
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+}
+
+/* Conteúdo do Modal */
+.modalcont {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+
+/* Fechar Botão */
+.closebtn {
+    color: #9d9797;
+    position: absolute;
+    font-size: 20px;
+    top: 0;
+    right: 0;
+    margin: 15px;
+    cursor: pointer;
+}
+
+/* Mostrar o Modal quando o checkbox estiver checado */
+.checkmodal:checked ~ .modal {
+    display: block;
 }

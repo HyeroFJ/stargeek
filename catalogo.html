@@ -16,7 +16,7 @@
         <header>
             <div class="hesquerda">
                 <div class="logo">
-                    <img src="imagens/starcoffe.png">
+                    <img src="imagens/Group 4.png">
                 </div>
                 <ul>
                     <li>StarGeek</li>
@@ -24,15 +24,104 @@
             </div>
             
             <div class="hdireita">
-                <a href="#" class="btn-01">Entrar</a>
-                <a href="#" class="btn-02">Participe agora</a>
+                <a href="#" class="btn-01"><i class="bi bi-person-circle"> Entrar</i></a>
             </div>
         </header>
         
         <section>
-            <form>
-                <img src="imagens/sonicmov.jpg">
-            </form>
+            <div>
+                <h1>Meu catálogo</h1><br>
+                <label for="checkmodal" class="openbtn">
+                    <div class="btn-01">
+                        <i class="bi bi-plus-circle-fill"> Adicionar</i>
+                    </div>
+                </label>
+                <input type="checkbox" id="checkmodal" class="checkmodal">
+                <!-- Modal -->
+                <div class="modal">
+                    <!-- Botao de fechar -->
+                    <label for="checkmodal" class="closebtn"><i class="bi bi-x-lg"></i></label>
+                    <!-- Conteudo -->
+                    <div class="modalcont">
+                        <img src="ImgAdd/Rectangle.png" alt="">
+
+                        <div>
+                            <form action="http://127.0.0.1:5500/catalogo.html">
+                                <fieldset>
+                                    <label for="inome">Nome:</label><br>
+                                    <input class="barra" id="inome" name="txtnome" type="text"><br>
+                                    <label for="ifale">Resumo:</label><br>
+                                    <textarea name="txtafale" id="ifale" cols="50" rows="6"></textarea><br>
+                                    <input type="submit" value="Adicionar">
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="linha"></div>
+            <div class="cards">
+                <div class="card">
+                    <div class="cardimg">
+                        <img src="imagens/avengers.jpg">
+                    </div>
+    
+                    <div class="cardinfo">
+    
+                        <div class="cardnome">
+                            <p>lorem</p>
+                            <i class="bi bi-pencil-square"></i>
+                            <i class="bi bi-trash"></i>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="card">
+                    <div class="cardimg">
+                        <img src="imagens/avengers.jpg">
+                    </div>
+    
+                    <div class="cardinfo">
+    
+                        <div class="cardnome">
+                            <p>lorem</p>
+                            <i class="bi bi-pencil-square"></i>
+                            <i class="bi bi-trash"></i>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="card">
+                    <div class="cardimg">
+                        <img src="imagens/starwars.jpeg">
+                    </div>
+    
+                    <div class="cardinfo">
+    
+                        <div class="cardnome">
+                            <p>lorem</p>
+                            <i class="bi bi-pencil-square"></i>
+                            <i class="bi bi-trash"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="cardimg">
+                        <img src="imagens/sonicmov.jpg">
+                    </div>
+    
+                    <div class="cardinfo">
+    
+                        <div class="cardnome">
+                            <p>lorem</p>
+                            <i class="bi bi-pencil-square"></i>
+                            <i class="bi bi-trash"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <footer>
