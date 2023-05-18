@@ -24,21 +24,21 @@
         <section class="main register">
             <div class="container">
                 <p class="title">Register</p>
-                <form>
+                <form action="" id="formulario">
                     <div class="form-control">
-                        <input type="text" placeholder="Username">
+                        <input type="text" placeholder="Username" id="nome">
                         <i class="fas fa-user"></i>
                     </div>
                     <div class="form-control">
-                        <input type="password" placeholder="Password">
+                        <input type="email" placeholder="E-mail" id="email">
                         <i class="fas fa-unlock"></i>
                     </div>
                     <div class="form-control">
-                        <input type="password" placeholder="Confirm password">
+                        <input type="password" placeholder="Password" id="senha">
                         <i class="fas fa-lock"></i>
                     </div>
 
-                    <button class="submit">Register</button>
+                    <button class="submit">Cadastrar</button>
                 </form>
             </div>
         </section>
@@ -56,13 +56,13 @@
         <section class="main login">
             <div class="container">
                 <p class="title">Login</p>
-                <form>
+                <form action="" id="formulario2">
                     <div class="form-control">
-                        <input type="text" placeholder="Username">
+                        <input type="email" placeholder="E-mail" id="email2">
                         <i class="fas fa-user"></i>
                     </div>
                     <div class="form-control">
-                        <input type="password" placeholder="Password">
+                        <input type="password" placeholder="Password" id="senha2">
                         <i class="fas fa-unlock"></i>
                     </div>
 
@@ -74,12 +74,6 @@
 
     </section>
 
-    <script>
-        var sideButtons = document.querySelectorAll('.side button');
-        sideButtons.forEach(btn => btn.addEventListener('click', () => {
-            document.body.classList.toggle('signup');
-        }))
-    </script>
-    
+<script src="login-cadastro.js" defer></script>
 </body>
 </html>
