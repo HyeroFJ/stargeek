@@ -1,8 +1,15 @@
 const formulario = document.getElementById("formulario");
+const formulario2 = document.getElementById("formulario2");
 const msg = document.querySelector(".mensagem");
 const nome = document.getElementById("nome");
 const email = document.getElementById("email");
 const senha = document.getElementById("senha");
+const email2 = document.getElementById("email2");
+const senha2 = document.getElementById("senha2");
+
+
+// código de cadastro
+
 
 var sideButtons = document.querySelectorAll('.side button');
         sideButtons.forEach(btn => btn.addEventListener('click', () => {
@@ -44,10 +51,8 @@ formulario.onsubmit = (evento) => {
     senha.focus();
     return;
   }
-
   verificarEmail(email.value, evento);
 };
-
 function criarUsuario(evento) {
   let dados = JSON.parse(localStorage.getItem("bd")) || [];
 
@@ -62,4 +67,28 @@ function criarUsuario(evento) {
   evento.preventDefault();
   setTimeout(() => {window.location.assign("login.html")},2000);
   window.location.assign("login.html");
+}
+
+
+// código de login
+
+
+formulario2.onsubmit = ()=>{
+  let dados = JSON.parse(localStorage.getItem("bd"))
+  dados.forEach((elemento) => {
+      if(elemento.email2 == email2.value && elemento.senha2 == senha2.value){
+          msg.innerHTML = "Aguarde redirecionamento..."
+          evt.preventDefault();
+          sessionStorage.setitem("logado", email.value);
+          setTimeout(()=>{
+              window.location.assign("catalogo.html");
+          }, 2000);
+          window.location.assign("catalogo.html");
+          return true;
+      } else {
+          msg.innerHTML = "Usuário ou senha incorretos!";
+          evt.preventDefault();
+          return null
+      }
+  });
 }
